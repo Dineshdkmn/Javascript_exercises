@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image gallery</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="javascript" src="https://blog.logrocket.com/wp-content/uploads/2021/02/machine-learning-libraries-javascript.png" alt="photoshop"></li>
+            <li><img width="200px" id="paris" src="https://t4.ftcdn.net/jpg/02/96/15/35/360_F_296153501_B34baBHDkFXbl5RmzxpiOumF4LHGCvAE.jpg" alt=""></li>
+            <li><img width="200px" id="himalayas" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZpnXX5raD8BqKf041vVQ-BNDUec24VTU0_A&usqp=CAU" alt=""></li>
+            <li><img width="200px" id="lion" src="https://wallpapers.com/images/featured/lion-pictures-snw3r6217skr1ni5.jpg" alt="" ></li>
+            <li><img width="200px" id="festival" src="https://cityfurnish.com/blog/wp-content/uploads/2023/09/long-shot-back-view-crowd-indian-people-diwali-generative-ai-min.jpg" alt=""></li>
+        </ul>
+   </div>
+</body>
+<script>
+    
+   
+    
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+    
+        
+    })
+    
+    
+</script>
+</html>
